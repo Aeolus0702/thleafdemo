@@ -12,6 +12,7 @@ import java.util.*;
 public class Mycontroller {
     @GetMapping("index")
     public String hello(Model model){
+        System.out.println("sda");
         model.addAttribute("msg","asdadsadasdasd");
         return "index";
     }
@@ -71,5 +72,17 @@ public class Mycontroller {
         model.addAttribute("String2",str2);
         model.addAttribute("number",price);
         return "index7";
+    }
+    //this is a new method
+    public void fenzhi(){
+        System.out.println("新增方法");
+        System.out.println("新增方法");
+        System.out.println("新增方法");
+    }
+    //this is a new method
+    public void fenzhi2(){
+        System.out.println("新增方法");
+        System.out.println("新增方法");
+        System.out.println("新增方法");
     }
 }
