@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--if 成立的时候使用-->
+<h1 th:if="${result == 'yes'}">结果是true</h1>
+<!--unless是条件不成立的时候显示-->
+<h1 th:unless="${result == 'yes'}">结果是false</h1>
+<!--switch的使用 如果没有加${}就说明是取得是值，否则的话就是通过键取值 -->
+<div th:switch="${person}">
+    <p th:case="'admin'">user is admin</p>
+    <p th:case="${person}">user is manager</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <h1 th:text="${userName}"></h1>
+ <h1 th:text="${href}"></h1>
+<input type="text" th:value="${userName}"/>
+<em th:sizes="${userName}"></em>
+<!-- 拼接-->
+ <span th:text="${userName}+'wc'"></span>
+ <span th:text="|${userName}wc|"></span>
+ <h1 th:text="点击" th:href="${href}"></h1>
+</body>
+</html>

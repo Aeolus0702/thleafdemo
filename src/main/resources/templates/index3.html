@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <table>
+       <tr>
+           <td>用户id</td>
+           <td>用户姓名</td>
+           <td>用户年龄</td>
+           <td>用户的地址</td>
+           <td>序号</td>
+           <td>序号 1</td>
+           <td>集合大小</td>
+           <td>当前的迭代变量</td>
+           <td>偶数</td>
+           <td>奇数</td>
+           <td>是否第一个</td>
+           <td>是否最后一个</td>
+       </tr>
+        <!--itStart是状态变量（可以随便取）-->
+       <tr th:each="user,iterStart:${userList}">
+           <td th:text="${user.id}">用户id</td>
+           <td th:text="${user.name}">用户姓名</td>
+           <td th:text="${user.age}">用户年龄</td>
+           <td th:text="${user.address}">用户的地址</td>
+           <td th:text="${iterStart.index}">序号 0</td>
+           <td th:text="${iterStart.count}">序号 1</td>
+           <td th:text="${iterStart.size}">集合大小</td>
+           <td th:text="${iterStart.current}">当前的迭代变量</td>
+           <td th:text="${iterStart.even}">偶数</td>
+           <td th:text="${iterStart.odd}">奇数</td>
+           <td th:text="${iterStart.first}">是否第一个</td>
+           <td th:text="${iterStart.last}">是否最后一个</td>
+       </tr>
+   </table>
+</body>
+</html>

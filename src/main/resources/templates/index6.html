@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!-- 把片段内容插入进来   -->
+    <div th:insert="~{foot :: copy}">
+
+    </div>
+    <!-- 把当前的标签替换为（片段）引用的   -->
+    <em th:replace="~{foot :: copy}">
+
+    </em>
+    <!-- 只拿片段（引用）的内容，保留自己的标签   -->
+    <div th:include="~{foot :: copy}">
+
+    </div>
+</body>
+</html>
